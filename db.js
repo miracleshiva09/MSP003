@@ -13,7 +13,7 @@ let restfuldb = {};
 
 restfuldb.all = () => {
     return new Promise((resolve, reject) => {
-        pool.query(`Select * from product`, (err, results) => {
+        pool.query(`CALL GET_SERVICE_ORGS_AND_LINES()`, (err, results) => {
             if(err) {
                 return reject(err);
             }
